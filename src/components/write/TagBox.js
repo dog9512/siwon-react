@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useCallback, useState, useEffect } from 'react';
+=======
+import React, { useState, useCallback, useEffect } from 'react';
+>>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 
@@ -31,8 +35,13 @@ const TagForm = styled.form`
     padding: 0.5rem;
     flex: 1;
   }
+<<<<<<< HEAD
 button {
   cursor: pointer;
+=======
+  button {
+    cursor: pointer;
+>>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49
     padding-right: 1rem;
     padding-left: 1rem;
     border: none;
@@ -60,8 +69,13 @@ const TagListBlock = styled.div`
 `;
 
 // React.memo를 사용하여 tag 값이 바뀔 때만 리렌더링되도록 처리
+<<<<<<< HEAD
 const TagItem = React.memo(({ tag, onRemove }) => (
     <Tag onClick={() => onRemove(tag)}>#{tag}</Tag>
+=======
+const TagItem = React.memo(({ tag, onRemove, onChangeTags }) => (
+  <Tag onClick={() => onRemove(tag)}>#{tag}</Tag>
+>>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49
 ));
 
 // React.memo를 사용하여 tags 값이 바뀔 때만 리렌더링되도록 처리
@@ -79,7 +93,11 @@ const TagBox = ({ tags, onChangeTags }) => {
 
   const insertTag = useCallback(
     tag => {
+<<<<<<< HEAD
       if (!tag) return; // 공백이라면 추가하지 않음 
+=======
+      if (!tag) return; // 공백이라면 추가하지 않음
+>>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49
       if (localTags.includes(tag)) return; // 이미 존재한다면 추가하지 않음
       const nextTags = [...localTags, tag];
       setLocalTags(nextTags);
@@ -104,7 +122,11 @@ const TagBox = ({ tags, onChangeTags }) => {
   const onSubmit = useCallback(
     e => {
       e.preventDefault();
+<<<<<<< HEAD
       insertTag(input.trim()); // 앞뒤 공백을 없앤 후 등록
+=======
+      insertTag(input.trim()); // 앞뒤 공백 없앤 후 등록
+>>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49
       setInput(''); // input 초기화
     },
     [input, insertTag],
@@ -131,5 +153,9 @@ const TagBox = ({ tags, onChangeTags }) => {
   );
 };
 
+<<<<<<< HEAD
 
 export default TagBox;
+=======
+export default TagBox;
+>>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49

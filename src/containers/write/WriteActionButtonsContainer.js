@@ -30,7 +30,11 @@ const WriteActionButtonsContainer = ({ history }) => {
     history.goBack();
   };
 
+<<<<<<< HEAD
   // 성공 혹은 실패 시 할 작업
+=======
+  // 성공 혹은 실패시 할 작업
+>>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49
   useEffect(() => {
     if (post) {
       const { _id, user } = post;
@@ -43,4 +47,8 @@ const WriteActionButtonsContainer = ({ history }) => {
   return <WriteActionButtons onPublish={onPublish} onCancel={onCancel} />;
 };
 
+<<<<<<< HEAD
 export default withRouter(WriteActionButtonsContainer);
+=======
+export default withRouter(WriteActionButtonsContainer);
+>>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49

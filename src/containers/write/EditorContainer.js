@@ -21,4 +21,8 @@ const EditorContainer = () => {
   return <Editor onChangeField={onChangeField} title={title} body={body} />;
 };
 
+<<<<<<< HEAD
 export default EditorContainer;
+=======
+export default EditorContainer;
+>>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49
