@@ -6,18 +6,12 @@ import palette from '../../lib/styles/palette';
 import Responsive from '../common/Responsive';
 
 const EditorBlock = styled(Responsive)`
-<<<<<<< HEAD
-  /* 페이지 위아래 여백 지정 */
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-`;
 
-=======
   /* 페이지 위 아래 여백 지정 */
   padding-top: 5rem;
   padding-bottom: 5rem;
 `;
->>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49
+
 const TitleInput = styled.input`
   font-size: 3rem;
   outline: none;
@@ -70,13 +64,6 @@ const Editor = ({ title, body, onChangeField }) => {
     });
   }, [onChangeField]);
 
-  const mounted = useRef(false);
-  useEffect(() => {
-    if (mounted.current) return;
-    mounted.current = true;
-    quillInstance.current.root.innerHTML = body;
-  }, [body]);
-
   const onChangeTitle = e => {
     onChangeField({ key: 'title', value: e.target.value });
   };
@@ -95,8 +82,5 @@ const Editor = ({ title, body, onChangeField }) => {
   );
 };
 
-<<<<<<< HEAD
+
 export default Editor;
-=======
-export default Editor;
->>>>>>> 57f614e03d7162c21e011550030e6bdc6a864b49
